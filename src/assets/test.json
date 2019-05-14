@@ -1,0 +1,20 @@
+[
+  {
+    "level": "N5",
+    "totalPoint": 180,
+    "userPoint": 80,
+    "duration": 0,
+    "startingTime": "",
+    "status": false,
+    "participant": 0
+  },
+  {
+    "level": "N3",
+    "totalPoint": 180,
+    "userPoint": 95,
+    "duration": 40,
+    "startingTime": "13/05/2018 08:16",
+    "status": true,
+    "participant": 0
+  }
+]

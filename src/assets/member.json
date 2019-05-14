@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "avatar": "https://s3-eu-west-1.amazonaws.com/brussels-images/content/gallery/visit/place/Square-du-Petit-Sablon_f8403e6b1dfadb4762d84ebb53b717fc21a4dc20_sq_640.jpg",
+    "name": "Lê Thị Hải Vân",
+    "point": 177,
+    "pass": true
+  },
+  {
+    "id": 2,
+    "avatar": "https://s3-eu-west-1.amazonaws.com/brussels-images/content/gallery/visit/place/Square-du-Petit-Sablon_f8403e6b1dfadb4762d84ebb53b717fc21a4dc20_sq_640.jpg",
+    "name": "Nguyễn Thị Cẩm Dung",
+    "point": 175,
+    "pass": true
+  }
+]
