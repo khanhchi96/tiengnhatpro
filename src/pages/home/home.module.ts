@@ -3,11 +3,15 @@ import {IonicPageModule} from 'ionic-angular';
 import {HomePage} from './home';
 import {MemberProvider} from "../../providers/member/member";
 import {HttpClientModule} from "@angular/common/http";
-import {TestProvider} from "../../providers/test/test";
+import {TestRoomProvider} from "../../providers/testRoom/testRoom";
+import {MemberComponent} from "../../components/member/member";
+import {TestRoomComponent} from "../../components/test-room/test-room";
 
 @NgModule({
   declarations: [
     HomePage,
+    MemberComponent,
+    TestRoomComponent
   ],
   imports: [
     IonicPageModule.forChild(HomePage),
@@ -16,11 +20,13 @@ import {TestProvider} from "../../providers/test/test";
 
   entryComponents: [
     HomePage,
+    MemberComponent,
+    TestRoomComponent
   ],
 
   providers: [
     MemberProvider,
-    TestProvider
+    TestRoomProvider
   ]
 })
 export class HomePageModule {}

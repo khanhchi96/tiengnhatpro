@@ -1,4 +1,4 @@
-export class Test{
+export class TestRoom{
   level: string;
   totalPoint: number;
   userPoint: number;

@@ -1,9 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-import {Member} from "../../modals/member";
-import {MemberProvider} from "../../providers/member/member";
-import {TestProvider} from "../../providers/test/test";
-import {Test} from "../../modals/test";
+import {Member} from "../../models/member";
+import {TestRoom} from "../../models/testRoom";
 
 
 @IonicPage()
@@ -14,25 +12,9 @@ import {Test} from "../../modals/test";
 export class HomePage {
 
   members: Member[];
-  tests: Test[];
+  tests: TestRoom[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public memberService: MemberProvider,
-              public testService: TestProvider) {
-  }
-
-  async ionViewDidLoad() {
-    try {
-      const memberData = await this.memberService.getMember();
-      const testData = await this.testService.getTest();
-      if (Array.isArray(memberData)) {
-        this.members = memberData;
-      }
-      if (Array.isArray(testData)) {
-        this.tests = testData;
-      }
-    } catch (e) {
-      console.error(e);
-    }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   showRankingTable() {

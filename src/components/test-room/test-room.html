@@ -1,0 +1,37 @@
+<table>
+  <tr>
+    <th>Level</th>
+    <th>Tổng điểm</th>
+    <th>Điểm đạt</th>
+    <th>Thời gian (phút)</th>
+    <th>Giờ thi</th>
+    <th>9:05:08</th>
+    <th>Số người thi</th>
+  </tr>
+
+  <tr *ngFor="let testRoom of testRooms">
+    <td>
+      <p>{{testRoom.level}}</p>
+    </td>
+    <td>
+      <p>{{testRoom.totalPoint}}</p>
+    </td>
+    <td>
+      <p>{{testRoom.userPoint}}</p>
+    </td>
+    <td>
+      <p>{{testRoom.duration}}</p>
+    </td>
+    <td>
+      <p *ngIf="testRoom.startingTime">{{testRoom.startingTime}}</p>
+      <p *ngIf="testRoom.startingTime == ''">//</p>
+    </td>
+    <td>
+      <button *ngIf="testRoom.status" class="opened" (click)="goToTestPage(testRoom.level)">Vào</button>
+      <button *ngIf="testRoom.status == false" class="closed">Đóng</button>
+    </td>
+    <td>
+      <p>{{testRoom.participant}}</p>
+    </td>
+  </tr>
+</table>

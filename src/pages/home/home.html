@@ -1,83 +1,16 @@
-<ion-content padding class = "content">
+<ion-content padding class="content">
   <div class="container">
     <div class="col-md-3 col-sm-3 col-lg-3 buttons">
-      <button (click)="showRankingTable()" id ="rankingBtn"><i class="fas fa-user-edit"></i> Bảng xếp hạng</button>
+      <button (click)="showRankingTable()" id="rankingBtn"><i class="fas fa-user-edit"></i> Bảng xếp hạng</button>
       <button (click)="showTestRoomTable()" id="testingBtn"><i class="fas fa-user-edit"></i> Vào phòng thi</button>
     </div>
 
     <div class="col-md-9 col-sm-9 col-lg-9 ranking" id="ranking">
-      <table>
-        <tr>
-          <th>Xếp hạng</th>
-          <th class="name">Học viên</th>
-          <th>Điểm</th>
-          <th>Passed/Failed</th>
-        </tr>
-        <tr *ngFor="let member of members"
-            [ngClass]="{'first': member.id ===1, 'second':member.id === 2, 'third': member.id === 3}">
-          <td class="id">
-            <img *ngIf="member.id === 1" src="./assets/img/first_ranking.png">
-            <img *ngIf="member.id === 2" src="./assets/img/second_ranking.png">
-            <img *ngIf="member.id === 3" src="./assets/img/third_ranking.png">
-            <p *ngIf="member.id > 3">{{member.id}}</p>
-          </td>
-          <td class="name">
-            <img src="{{member.avatar}}" class="avatar" alt = "avatar" >
-            <p>{{member.name}}</p>
-          </td>
-          <td class="point">
-            <p>{{member.point}}</p>
-          </td>
-          <td class="pass">
-            <p *ngIf="member.pass"><i class="fas fa-check"></i></p>
-          </td>
-        </tr>
-      </table>
+      <member></member>
     </div>
-
 
     <div class="col-md-9 col-sm-9 col-lg-9 testing" id="testing">
-      <table>
-        <tr>
-          <th>Level</th>
-          <th>Tổng điểm</th>
-          <th>Điểm đạt</th>
-          <th>Thời gian (phút)</th>
-          <th>Giờ thi</th>
-          <th>9:05:08</th>
-          <th>Số người thi</th>
-        </tr>
-
-        <tr *ngFor="let test of tests">
-          <td>
-            <p>{{test.level}}</p>
-          </td>
-          <td>
-            <p>{{test.totalPoint}}</p>
-          </td>
-          <td>
-            <p>{{test.userPoint}}</p>
-          </td>
-          <td>
-            <p>{{test.duration}}</p>
-          </td>
-          <td>
-            <p *ngIf="test.startingTime">{{test.startingTime}}</p>
-            <p *ngIf="test.startingTime == ''">//</p>
-          </td>
-          <td>
-            <button *ngIf="test.status" class="opened">Vào</button>
-            <button *ngIf="test.status == false" class="closed">Đóng</button>
-          </td>
-          <td>
-            <p>{{test.participant}}</p>
-          </td>
-        </tr>
-      </table>
-
+      <test-room></test-room>
     </div>
   </div>
-
-
-
 </ion-content>

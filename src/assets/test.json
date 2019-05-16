@@ -1,20 +1,73 @@
 [
   {
-    "level": "N5",
-    "totalPoint": 180,
-    "userPoint": 80,
-    "duration": 0,
-    "startingTime": "",
-    "status": false,
-    "participant": 0
-  },
-  {
     "level": "N3",
-    "totalPoint": 180,
-    "userPoint": 95,
-    "duration": 40,
-    "startingTime": "13/05/2018 08:16",
-    "status": true,
-    "participant": 0
+    "type": "vocab",
+    "code": "N3_D0001",
+    "content": [
+      {
+        "mondai_id": 1,
+        "mondai": [
+          {
+            "question_id": 1,
+            "question": "<u>支社</u>に書類を郵送する。",
+            "answer": {
+              "1-1": "ぎしゃ",
+              "1-2": "じしゃ",
+              "1-3": "ちしゃ",
+              "1-4": "ししゃ"
+            },
+            "correctAnswer": "1-4"
+          },
+
+          {
+            "question_id": 2,
+            "question": "<u>紅茶</u>にミルクを入れて飲む。",
+            "answer": {
+              "1-1": "きっさ",
+              "1-2": "こうちゃ",
+              "1-3": "ほんちゃ",
+              "1-4": "こうさ"
+            },
+            "correctAnswer": "1-2"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "level": "N2",
+    "type": "reading",
+    "code": "N3_D0001",
+    "content": [
+      {
+        "mondai_id": 1,
+        "mondai": [
+          {
+            "question_id": 1,
+            "question": "<u>支社</u>に書類を郵送する。",
+            "answer": {
+              "1-1": "ぎしゃ",
+              "1-2": "じしゃ",
+              "1-3": "ちしゃ",
+              "1-4": "ししゃ"
+            },
+            "correctAnswer": "1-4"
+          },
+
+          {
+            "question_id": 2,
+            "question": "<u>紅茶</u>にミルクを入れて飲む。",
+            "answer": {
+              "1-1": "きっさ",
+              "1-2": "こうちゃ",
+              "1-3": "ほんちゃ",
+              "1-4": "こうさ"
+            },
+            "correctAnswer": "1-2"
+          }
+        ]
+      }
+    ]
   }
 ]

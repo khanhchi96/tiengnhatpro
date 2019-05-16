@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {Member} from "../../modals/member";
+import {Member} from "../../models/member";
 
 @Injectable()
 export class MemberProvider {

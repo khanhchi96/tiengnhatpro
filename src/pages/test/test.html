@@ -1,0 +1,29 @@
+<ion-content padding>
+  <div class="container">
+    <div class="col-md-3 col-sm-3 col-lg-3 buttons">
+      <button>Từ vựng</button>
+      <button>Ngữ pháp</button>
+      <button>Đọc hiểu</button>
+      <button>Nghe</button>
+    </div>
+
+    <div class="col-md-9 col-sm-9 col-lg-9" *ngFor="let test of tests">
+      <h2 *ngIf="test.type === 'vocab'">JLPT-文字・語彙 (Đề từ vựng)</h2>
+      <h2 *ngIf="test.type === 'grammar'">JLPT-文法 (Đề ngữ pháp)</h2>
+      <h2 *ngIf="test.type === 'reading'">JLPT-読解(Đề luyện đọc)</h2>
+      <h2 *ngIf="test.type === 'listening'">JLPT-聴解（Đề Luyện Nghe)</h2>
+
+<!--      <div class="mondai_1">-->
+<!--        <h3>問題１　＿＿＿のことばの読み方として最もよいものを、１・２・３・４から一つえらびなさい。</h3>-->
+<!--        <div *ngFor="let question of questions">-->
+
+<!--        </div>-->
+<!--      </div>-->
+      <div *ngFor="let answer of test.content">
+        <p>{{answer}}</p>
+
+      </div>
+
+    </div>
+  </div>
+</ion-content>

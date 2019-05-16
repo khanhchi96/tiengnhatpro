@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>Xếp hạng</th>
+    <th class="name">Học viên</th>
+    <th>Điểm</th>
+    <th>Passed/Failed</th>
+  </tr>
+  <tr *ngFor="let member of members"
+      [ngClass]="{'first': member.id ===1, 'second':member.id === 2, 'third': member.id === 3}">
+    <td class="id">
+      <img *ngIf="member.id === 1" src="./assets/img/first_ranking.png">
+      <img *ngIf="member.id === 2" src="./assets/img/second_ranking.png">
+      <img *ngIf="member.id === 3" src="./assets/img/third_ranking.png">
+      <p *ngIf="member.id > 3">{{member.id}}</p>
+    </td>
+    <td class="name">
+      <img src="{{member.avatar}}" class="avatar" alt="avatar">
+      <p>{{member.name}}</p>
+    </td>
+    <td class="point">
+      <p>{{member.point}}</p>
+    </td>
+    <td class="pass">
+      <p *ngIf="member.pass"><i class="fas fa-check"></i></p>
+    </td>
+  </tr>
+</table>
+
